@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import "./app.css"
 
 const COUNTDOWN_INITIAL_TIME_IN_SECONDS = 1 * 60;
 
@@ -20,10 +21,12 @@ function App(){
 
 
     return(
-        <div>
-            <span>{String(minutes).padStart(2, '0')}</span>
-            <span>:</span>
-            <span>{String(seconds).padStart(2, '0')}</span>
+        <div className="container">
+            <div>
+                <span>{String(minutes).padStart(2, '0')}</span>
+                <span>:</span>
+                <span>{String(seconds).padStart(2, '0')}</span>
+            </div>
         </div>
     )
 }
